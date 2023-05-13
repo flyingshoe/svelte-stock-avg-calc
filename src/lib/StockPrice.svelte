@@ -30,48 +30,38 @@
     let newPrice = 0.016;
     let newTotalCost = 1000;
     $:newAvgCost = ((curAvgPrice*curQuantity) + newTotalCost)/(curQuantity + (newTotalCost/newPrice))
+</script>
   
-    // Table Data
-    // let amtIntv = 1000;
-    // let numIntv = 10;
-  
-  </script>
-  
-  <div class='row'>
+<div class='row'>
     <div class='col lg-3 sm-6'>
-      <Card title="Current Stock" >
+        <Card title="Current Stock" >
         <h5>Stock Name</h5>
         <input placeholder="Stock Name" class="margin-bottom" bind:value={stockName}/>
         
         <h5>Average Price</h5>
         <input type='number' placeholder="Average Price" bind:value={curAvgPrice} class="margin-bottom"/>
-  
+
         <h5>Quantity</h5>  
         <input type='number' placeholder="Quantity" bind:value={curQuantity} />
-      </Card>
+        </Card>
     </div>  
     <div class='col lg-3 sm-6'>
-      <Card title="New Stock">
+        <Card title="New Stock">
         <h5>Price</h5>
         <input type='number' placeholder="Price" bind:value={newPrice} class="margin-bottom" />
-  
+
         <h5>Additional Capital</h5>
         <input type='number' placeholder="Additional Capital" bind:value={newTotalCost} class="margin-bottom-large" />
         <h4>Average Cost: {formatVal(newAvgCost)}</h4>
-      </Card>
+        </Card>
     </div>
-    <!--    
-    <Card title="Table Data"  width="400px;">
-      <input type='number' placeholder="Amount Spent" bind:value={amtIntv} class="margin-bottom-small" />
-      <input type='number' placeholder="Number of intervals" bind:value={numIntv} class="margin-bottom-small" />
-    </Card>
-     -->
+
     <div class='col lg-6 sm-12'>
-      <Card>
+        <Card>
         <Table {data} hoverable/>
-      </Card>
+        </Card>
     </div>
-  </div>
-  
-  
+</div>
+
+
   
