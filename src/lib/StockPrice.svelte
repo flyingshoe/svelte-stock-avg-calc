@@ -17,7 +17,7 @@
       const priceDiff = avgPrice - $stockData.curAvgPrice;
       const percentDiff = (priceDiff/$stockData.curAvgPrice)*100;
       return {
-      "Additional Capital($)": newAmt,
+      "Additional Capital ($)": newAmt,
       "Average Price": formatVal(avgPrice),
       "Price difference": formatVal(priceDiff),
       "% difference": formatVal(percentDiff,2)
@@ -44,7 +44,7 @@
         <h5>Price</h5>
         <input type='number' placeholder="Price" bind:value={$stockData.newPrice} class="margin-bottom" />
 
-        <h5>Additional Capital($)</h5>
+        <h5>Additional Capital ($)</h5>
         <input type='number' placeholder="Additional Capital" bind:value={$stockData.newTotalCost} class="margin-bottom-large" />
         <h4>Average Cost: {formatVal(newAvgCost)}</h4>
         </Card>
