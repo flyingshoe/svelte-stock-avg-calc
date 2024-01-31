@@ -1,6 +1,5 @@
 <script>
   // @ts-nocheck
-  import "papercss/dist/paper.min.css";
   import { Card, Table } from "spaper";
   import { stockData } from "../store";
 
