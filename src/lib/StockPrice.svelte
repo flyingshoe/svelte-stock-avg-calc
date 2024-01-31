@@ -34,7 +34,7 @@
     ($stockData.curQuantity + $stockData.newTotalCost / $stockData.newPrice);
 </script>
 
-<div class="row">
+<div class="row" style="margin-bottom:0">
   <div class="col lg-3 sm-6">
     <Card title="Current Stock">
       <h5>Stock Name</h5>
